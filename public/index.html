@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Friends Included sales, expenses, approvals, commissions, and financial results.">
+  <title>Friends Included Finance</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/responsive.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">FI</span><div><strong>Friends Included</strong><small>Finance operations</small></div></div>
+    <div class="role-control"><span id="mode-badge" class="status warn">Preview data</span><label>Demonstration role<select id="role-select" aria-label="Demonstration role"></select></label></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar">
+      <nav id="nav" aria-label="Application sections"></nav>
+      <div class="identity"><small>Signed in as</small><strong id="identity-name">Loading…</strong><div id="external-links"></div></div>
+    </aside>
+    <main class="content">
+      <div id="notice" aria-live="polite"></div>
+      <div id="app"><div class="loading">Loading financial records…</div></div>
+    </main>
+  </div>
+  <script type="module" src="/app.js?v=3"></script>
+</body>
+</html>
