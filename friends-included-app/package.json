@@ -1,0 +1,7 @@
+{
+  "name": "friends-included-finance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "check": "node --check public/app.js && node --check api/_core.js" }
+}

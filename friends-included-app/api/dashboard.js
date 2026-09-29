@@ -1,0 +1,2 @@
+import { all } from "./_core.js";
+export default async function handler(req,res){if(req.method!=="GET")return res.status(405).json({error:"Method not allowed."});try{const data=await all(),actor=data.employees.find(e=>e.id===(req.query.actorId||"svetlana"))||data.employees[0];res.status(200).json({...data,sales:actor.role==="manager"?data.sales:data.sales.filter(s=>s.salespersonId===actor.id),expenses:actor.role==="manager"?data.expenses:data.expenses.filter(e=>e.reporterId===actor.id)})}catch(e){res.status(503).json({error:e.message})}}
